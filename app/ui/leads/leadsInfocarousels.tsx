@@ -8,7 +8,6 @@ import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import ModeOutlinedIcon from '@mui/icons-material/ModeOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
 import medalIcon from '@/public/images/medal.png';
-import rateIcon from '@/public/images/rate.jpg';
 import sheildIcon from '@/public/images/shield.png';
 import chartIcon from '@/public/images/pie-chart.png';
 import { ThumbsDown, ThumbsUp } from 'lucide-react';

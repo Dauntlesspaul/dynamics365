@@ -5,7 +5,6 @@ import { ChevronLeftOutlined, ChevronRightOutlined } from '@mui/icons-material';
 import Image from 'next/image';
 import { leadsCarousel } from '@/lib/placeholder';
 import autoIcon from '@/public/images/stars-svg.svg';
-import LeadModal from './leads-modal';
 import LeadInfo from './leadsInfocarousels';
 
 
