@@ -95,7 +95,7 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
                         width={17}
                         height={17}
                         />
-                        <p className='text-xs font-bold bg-gradient-to-r from-blue-700 to-[#aa9acf] text-transparent bg-clip-text'>Jane may be interested in upgrading esspreso machines for her in-store coffee shop.</p>
+                        <p className='text-xs font-bold bg-gradient-to-r from-blue-700 to-[#aa9acf] text-transparent bg-clip-text'>{lead.name} may be interested in upgrading esspreso machines for her in-store coffee shop.</p>
                     </div>
                     <div className='flex gap-2'>
                         <div className='px-2 py-[3px] cursor-pointer shadow-md rounded-sm bg-white flex items-center gap-[2px]'>
