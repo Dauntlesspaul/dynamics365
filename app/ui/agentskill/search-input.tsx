@@ -12,87 +12,53 @@ const checkedIcon = <CheckBoxIcon fontSize="small" />;
 export default function CheckboxesTags() {
   return (
     <div className='flex gap-3'>
-    <Autocomplete
-      multiple
-      id="checkboxes-tags-demo"
-      options={users}
-      disableCloseOnSelect
-      getOptionLabel={(option) => option.title}
-      renderOption={(props, option, { selected }) => {
-        const { key, ...optionProps } = props;
-        return (
-          <li key={key} {...optionProps}>
-            <Checkbox
-              icon={icon}
-              checkedIcon={checkedIcon}
-              style={{ marginRight: 8 }}
-              checked={selected}
-            />
-            {option.title}
-          </li>
-        );
-      }}
-      size='small'
-      style={{ width: '100%' }}
-      renderInput={(params) => (
-        <TextField {...params} label="" placeholder="" />
-
-      )}
-    />
-    <button className='p-1 w-36 bg-[#2463e3] text-white rounded-sm'>
+      <Autocomplete
+        multiple
+        id="checkboxes-tags-demo"
+        options={users}
+        disableCloseOnSelect
+        getOptionLabel={(option) => option.name}
+        renderOption={(props, option, { selected }) => {
+          const { key, ...optionProps } = props;
+          return (
+            <li key={key} {...optionProps}>
+              <Checkbox
+                icon={icon}
+                checkedIcon={checkedIcon}
+                style={{ marginRight: 8 }}
+                checked={selected}
+              />
+              {option.name} ({option.email})
+            </li>
+          );
+        }}
+        size='small'
+        style={{ width: '100%' }}
+        renderInput={(params) => (
+          <TextField {...params} label="" placeholder="" />
+        )}
+      />
+      <button className='p-1 w-36 bg-[#2463e3] text-white rounded-sm'>
         Allow access
-    </button>
+      </button>
     </div>
   );
 }
 
-
 const users = [
-  { title: 'The Shawshank Redemption', year: 1994 },
-  { title: 'The Godfather', year: 1972 },
-  { title: 'The Godfather: Part II', year: 1974 },
-  { title: 'The Dark Knight', year: 2008 },
-  { title: '12 Angry Men', year: 1957 },
-  { title: "Schindler's List", year: 1993 },
-  { title: 'Pulp Fiction', year: 1994 },
-  {
-    title: 'The Lord of the Rings: The Return of the King',
-    year: 2003,
-  },
-  { title: 'The Good, the Bad and the Ugly', year: 1966 },
-  { title: 'Fight Club', year: 1999 },
-  {
-    title: 'The Lord of the Rings: The Fellowship of the Ring',
-    year: 2001,
-  },
-  {
-    title: 'Star Wars: Episode V - The Empire Strikes Back',
-    year: 1980,
-  },
-  { title: 'Forrest Gump', year: 1994 },
-  { title: 'Inception', year: 2010 },
-  {
-    title: 'The Lord of the Rings: The Two Towers',
-    year: 2002,
-  },
-  { title: "One Flew Over the Cuckoo's Nest", year: 1975 },
-  { title: 'Goodfellas', year: 1990 },
-  { title: 'The Matrix', year: 1999 },
-  { title: 'Seven Samurai', year: 1954 },
-  {
-    title: 'Star Wars: Episode IV - A New Hope',
-    year: 1977,
-  },
-  { title: 'City of God', year: 2002 },
-  { title: 'Se7en', year: 1995 },
-  { title: 'The Silence of the Lambs', year: 1991 },
-  { title: "It's a Wonderful Life", year: 1946 },
-  { title: 'Life Is Beautiful', year: 1997 },
-  { title: 'The Usual Suspects', year: 1995 },
-  { title: 'Léon: The Professional', year: 1994 },
-  { title: 'Spirited Away', year: 2001 },
-  { title: 'Saving Private Ryan', year: 1998 },
-  { title: 'Once Upon a Time in the West', year: 1968 },
-  { title: 'American History X', year: 1998 },
-  { title: 'Interstellar', year: 2014 },
-];
+    { name: 'Winford Asher', email: 'winford.asher@email.com' },
+    { name: 'Josia Love', email: 'josia.love@email.com' },
+    { name: 'Harrison Curtis', email: 'harrison.curtis@email.com' },
+    { name: 'Jermaine Berrett', email: 'jermaine.berrett@email.com' },
+    { name: 'Gerald Stephens', email: 'gerald.stephens@email.com' },
+    { name: 'Haile Griffiths', email: 'haile.griffiths@email.com' },
+    { name: 'Rachael Michael', email: 'rachael.michael@email.com' },
+    { name: 'Alex Baker', email: 'alex.baker@email.com' },
+    { name: 'Lilly Pyles', email: 'lilly.pyles@email.com' },
+    { name: 'Jane Reyes', email: 'jane.reyes@email.com' },
+    { name: 'Peter White', email: 'peter.white@email.com' },
+    { name: 'Sophia Lang', email: 'sophia.lang@email.com' },
+    { name: 'Lucas Brown', email: 'lucas.brown@email.com' },
+    { name: 'Emma Taylor', email: 'emma.taylor@email.com' },
+    { name: 'Oliver Davis', email: 'oliver.davis@email.com' },
+  ];
