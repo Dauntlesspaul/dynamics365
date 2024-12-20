@@ -76,8 +76,8 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
                 <div className='rounded-full size-8  overflow-hidden'>
                     <Image
                     src={lead.image}
-                    className=' object-cover w-full h-fullobject-center'
-                    alt='jane'
+                    className=' object-cover w-full h-full object-center'
+                    alt={lead.name}
                     />
                 </div>
                 <div>
@@ -220,7 +220,7 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
         </button>
 
         {/* Pagination Dots */}
-        <div className="flex absolute bottom-[12px] left-0 right-0 justify-center mt-4 space-x-2">
+        <div className="flex absolute bottom-[20px] left-0 right-0 justify-center mt-4 space-x-2">
           {Array.from({ length: totalSlides }).map((_, index) => (
             <button
               key={index}
@@ -231,6 +231,7 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
             ></button>
           ))}
         </div>
+        <p className='text-xs text-gray-500 absolute bottom-5 left-[55px]'>Showing {currentIndex + 1} of {leadsCarousel.length} </p>
       </div>
     </>
   );
