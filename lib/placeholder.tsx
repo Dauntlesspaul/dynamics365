@@ -144,11 +144,11 @@ const leadsCarousel = [
     quality: () => (
       <ul>
         <li className="text-xs list-disc ml-5">
-          Jane is a <b>key decision maker</b> and was browsing <b>&apos;espresso machines&apos;</b> on First Coffee's website. &emsp;
+          Jane is a <b>key decision maker</b> and was browsing <b>&apos;espresso machines&apos;</b> on First Coffee&apos;s website. &emsp;
           <span className="text-[10px] bg-white p-[2px]">1</span>
         </li>
         <li className="text-xs list-disc ml-5">
-          Multiple people at her company have reported 'slowness' during <b>service request</b> &emsp;
+          Multiple people at her company have reported &apos;slowness&apos; during <b>service request</b> &emsp;
           <span className="text-[10px] bg-white p-[2px]">2</span>
         </li>
         <li className="text-xs list-disc ml-5">
@@ -186,9 +186,9 @@ const leadsCarousel = [
     about: () => (
       <>
         Jane Reyes, the Chief Operating Officer of Northwind Traders, is a dynamic leader with a proven track record in
-        optimizing operations and enhancing customer experiences. Under her guidance, Northwind Traders' in-store coffee
-        shops have flourished, becoming a hallmark of quality and innovation. Jane's commitment to excellence makes her
-        an ideal partner for First Coffee. She is always seeking top-tier equipment to elevate her coffee shops'
+        optimizing operations and enhancing customer experiences. Under her guidance, Northwind Traders&apos; in-store coffee
+        shops have flourished, becoming a hallmark of quality and innovation. Jane&apos;s commitment to excellence makes her
+        an ideal partner for First Coffee. She is always seeking top-tier equipment to elevate her coffee shops&apos;
         offerings, ensuring consistent, high-quality services.
       </>
     ),
@@ -256,7 +256,7 @@ const leadsCarousel = [
     ),
     about: () => (
       <>
-        Allan Munger leads Contosso Coffee's real estate division, managing their rapid expansion into new markets. His
+        Allan Munger leads Contosso Coffee&apos;s real estate division, managing their rapid expansion into new markets. His
         strategic oversight ensures that each new location maximizes operational efficiency and customer satisfaction.
         Allan is actively exploring partnerships that can enhance their infrastructure.
       </>
@@ -284,7 +284,7 @@ const leadsCarousel = [
     quality: () => (
       <ul>
         <li className="text-xs list-disc ml-5">
-          Samantha has <b>global sales expertise</b> and oversees Starbucks' regional logistics. &emsp;
+          Samantha has <b>global sales expertise</b> and oversees Starbucks&apos; regional logistics. &emsp;
           <span className="text-[10px] bg-white p-[2px]">1</span>
         </li>
         <li className="text-xs list-disc ml-5">
@@ -321,7 +321,7 @@ const leadsCarousel = [
     ),
     about: () => (
       <>
-         Samantha Green, a Sales Manager at Starbucks Global, specializes in optimizing supply chains and driving revenue through innovative strategies. Her work has been pivotal in expanding Starbucks' regional distribution networks. Samantha’s focus on achieving consistent growth and her collaborative approach position her as a key player in shaping Starbucks' success. Her dedication to operational excellence aligns perfectly with First Coffee’s mission.
+         Samantha Green, a Sales Manager at Starbucks Global, specializes in optimizing supply chains and driving revenue through innovative strategies. Her work has been pivotal in expanding Starbucks&apos; regional distribution networks. Samantha&apos;s focus on achieving consistent growth and her collaborative approach position her as a key player in shaping Starbucks&apos;success. Her dedication to operational excellence aligns perfectly with First Coffee&apos;s mission.
       </>
     ),
   },
@@ -335,7 +335,7 @@ const leadsCarousel = [
     ),
     taskheader: () => (
       <>
-        <EmailOutlinedIcon sx={{ fontSize: '18px', marginTop: '-4px' }} /> Review Michael’s email
+        <EmailOutlinedIcon sx={{ fontSize: '18px', marginTop: '-4px' }} /> Review Michael&apos;s email
       </>
     ),
     task: 'Michael has requested a breakdown of cost efficiencies for upgrading roasting equipment.',
@@ -347,7 +347,7 @@ const leadsCarousel = [
     quality: () => (
       <ul>
         <li className="text-xs list-disc ml-5">
-          Michael leads <b>Blue Bean Roasters' operations</b>, focusing on innovation and efficiency. &emsp;
+          Michael leads <b>Blue Bean Roasters&apos; operations</b>, focusing on innovation and efficiency. &emsp;
           <span className="text-[10px] bg-white p-[2px]">1</span>
         </li>
         <li className="text-xs list-disc ml-5">
