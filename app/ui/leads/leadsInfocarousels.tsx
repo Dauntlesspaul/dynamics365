@@ -13,6 +13,7 @@ import chartIcon from '@/public/images/pie-chart.png';
 import { ThumbsDown, ThumbsUp } from 'lucide-react';
 import messageIcon from '@/public/images/mail.png';
 import autoIcon from '@/public/images/stars-svg.svg';
+import rateIcon from '@/public/images/rate.jpg';
 
 
 
@@ -140,19 +141,29 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
                                 <div className='p-3 bg-white  shadow-md rounded-lg'>
                                 <div className='flex gap-3'>
                                         <Image
-                                        alt='decision icon'
+                                        alt='medal'
                                         src={medalIcon}
                                         width={45}
                                         height={45}
                                         />
                                     <div>
                                        
-                                    </div>
                                     {lead.deal()}
+                                    </div>
                                 </div>    
                                 </div>
-                                <div className='p-3 bg-white shadow-md rounded-lg'>
-                                {lead.intent()}
+                                <div className='p-3 bg-white  shadow-md rounded-lg'>
+                                <div className='flex gap-3'>
+                                        <Image
+                                        alt='decision icon'
+                                        src={rateIcon}
+                                        width={45}
+                                        height={45}
+                                        />
+                                    <div>
+                                    {lead.intent()}
+                                    </div>
+                                </div>    
                                 </div>
                             </div>
                         </div>
