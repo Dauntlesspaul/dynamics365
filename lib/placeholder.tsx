@@ -146,7 +146,7 @@ const leadsCarousel = [
     quality: () => (
       <ul>
         <li className="text-xs list-disc ml-5">
-          Jane is a <b>key decision maker</b> and was browsing <b>'espresso machines'</b> on First Coffee's website. &emsp;
+          Jane is a <b>key decision maker</b> and was browsing <b>&apos;espresso machines&apos;</b> on First Coffee's website. &emsp;
           <span className="text-[10px] bg-white p-[2px]">1</span>
         </li>
         <li className="text-xs list-disc ml-5">
