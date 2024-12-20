@@ -62,7 +62,7 @@ function KeyActivities() {
                 height={17}
                 />
             </div>
-            <p className='text-[11px] my-1 font-semibold'><CalendarMonthOutlinedIcon sx={{fontSize: '16px',marginTop: '-2px', marginRight: '3px'}}/> Prepare me for Fabrikam's key stake holder meeting</p>
+            <p className='text-[11px] my-1 font-semibold'><CalendarMonthOutlinedIcon sx={{fontSize: '16px',marginTop: '-2px', marginRight: '3px'}}/> Prepare me for Fabrikam&apos;s key stake holder meeting</p>
          </div>
         </div>
         <p className='my-3 h-fit'>

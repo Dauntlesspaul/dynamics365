@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState } from 'react';
 import { ChevronLeftOutlined, ChevronRightOutlined } from '@mui/icons-material';
 import Image from 'next/image';

@@ -95,8 +95,8 @@ function LeadModal({closeModal}: {closeModal: ()=>void}) {
                     </div>
                     <h3 className='bg-gradient-to-r from-blue-700 to-[#b7a4e2] text-transparent bg-clip-text text-sm'>Why i picked this lead</h3>
                     <ul>
-                        <li className='text-xs list-disc ml-5'>Jane is a <b>key decision maker</b> and was browsing <b>'espresso machines'</b> on First Coffee's website. &emsp;<span className='text-[10px] bg-white p-[2px]'>1</span></li>
-                        <li className='text-xs list-disc ml-5'>Multiple people at her company have reported 'slowness' during <b>service request</b> &emsp;<span className='text-[10px] bg-white p-[2px]'>2</span></li>
+                        <li className='text-xs list-disc ml-5'>Jane is a <b>key decision maker</b> and was browsing <b>&apos;espresso machines&apos;</b> on First Coffee&apos;s website. &emsp;<span className='text-[10px] bg-white p-[2px]'>1</span></li>
+                        <li className='text-xs list-disc ml-5'>Multiple people at her company have reported &apos;slowness&apos; during <b>service request</b> &emsp;<span className='text-[10px] bg-white p-[2px]'>2</span></li>
                         <li className='text-xs list-disc ml-5'>Northwind Traders currently see <b>$200M in revenue</b> from their in-store coffee shops. &emsp;&emsp;<span className='text-[10px] bg-white p-[2px]'>3</span></li>
                         <li></li>
                     </ul>
@@ -185,7 +185,7 @@ function LeadModal({closeModal}: {closeModal: ()=>void}) {
             <div className='mt-4 bg-gradient-to-b from-[#f1f2f4] to-[#d8dbe1] p-4 rounded-xl shadow-md '>
                 <h2 className='text-sm font-semibold'>About Jane</h2>
                 <p className='text-sm'>
-                    Jane Reyes, the Chief Operating Officer of Northwind Traders, is a dynamic leader with proven track record in optimizing operation and enhancing customer experiences. Under her guidance, Northwind Traders' in-store coffee shops have flourished, becoming a hallmark of quality and innovation. Jane's commitment to exellence makes her an ideal partner for First Coffee. She is always seeking top-tier equipment to elevate her coffee shops' offerings. ensuring consist, high quality services.
+                    Jane Reyes, the Chief Operating Officer of Northwind Traders, is a dynamic leader with proven track record in optimizing operation and enhancing customer experiences. Under her guidance, Northwind Traders&apos; in-store coffee shops have flourished, becoming a hallmark of quality and innovation. Jane&apos;s commitment to exellence makes her an ideal partner for First Coffee. She is always seeking top-tier equipment to elevate her coffee shops&apos; offerings. ensuring consist, high quality services.
                 </p>
             </div>
         </div>

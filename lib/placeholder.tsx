@@ -6,10 +6,8 @@ import janeProfile from '@/public/images/jane.webp';
 import allanProfile from '@/public/images/allanmunger.jpg';
 import samanthaProfile from '@/public/images/samanthagreen.jpg';
 import michaelProfile from '@/public/images/michaelcharter.jpg';
-import emilyProfile from '@/public/images/davids.jpg';
 import PhoneEnabledOutlinedIcon from '@mui/icons-material/PhoneEnabledOutlined';
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
-import TaskOutlinedIcon from '@mui/icons-material/TaskOutlined';
 import decisionIcon from '@/public/images/decison maker.jpg';
 import Image from 'next/image';
 
