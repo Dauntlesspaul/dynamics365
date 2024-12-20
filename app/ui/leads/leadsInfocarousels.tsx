@@ -43,7 +43,7 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
 
   return (
     <>
-      <div className="relative w-full max-w-4xl bg-gradient-to-r from-blue-700 via-[#b8dbf0] to-[#ba98d7] shadow-xl shadow-[#a0a0a0ce] rounded-2xl">
+      <div className="relative w-full -top-[10px] max-w-4xl bg-gradient-to-r from-blue-700 via-[#b8dbf0] to-[#ba98d7] shadow-xl shadow-[#a0a0a0ce] rounded-2xl">
   <div className="overflow-hidden rounded-lg">
     <div
       className="flex transition-transform duration-500"
