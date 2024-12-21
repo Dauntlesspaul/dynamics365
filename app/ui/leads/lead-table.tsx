@@ -91,6 +91,7 @@ function LeadTable() {
                         </tr>
                     ))
                 }
+                {leadsdata.length === 0 && <h2 className='ml-4'>No Result Found</h2>}
             </tbody>
         </table>
 

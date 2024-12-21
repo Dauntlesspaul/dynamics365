@@ -54,7 +54,7 @@ function CopilotMenu() {
               are actively engaging. These leads need your focus.
             </p>
             <div className="flex w-full mt-4">
-              <div className="w-fit">
+              <div className="w-fit  ">
                 <Carousel />
               </div>
             </div>
