@@ -21,6 +21,8 @@ import linkedinIcon from '@/public/images/linkedin.png';
 function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: number}) {
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [like, setLike] = useState(false);
+  const [dislike, setDislike] = useState(false);
 
   useEffect(()=>{
      setCurrentIndex(leadIndex)
@@ -30,17 +32,28 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % totalSlides);
+    setDislike(false)
+    setLike(false)
   };
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + totalSlides) % totalSlides);
+    setDislike(false)
+    setLike(false)
   };
 
 
   const handleClose = ()=>{
     closeModal()
   }
-  
+  const handleLike = () => {
+    setDislike(false)
+    setLike((prev)=> !prev)
+  }
+  const handleDisLike = () => {
+    setLike(false)
+    setDislike((prev)=> !prev)
+  }
 
   return (
     <>
@@ -203,8 +216,8 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
                         <div className='flex gap-4'>
                             <p className='text-[10px] p-[1px] px-[5px] rounded-sm bg-[#ededed] w-fit'>Ai-generated content may be incorrect</p>
                             <div className='flex gap-1 items-center'>
-                                <ThumbsUp size={10}/>
-                                <ThumbsDown size={10}/>
+                                <ThumbsUp style={{cursor: 'pointer'}} onClick={handleLike} className={like ? `text-green-500` : `text-gray-500` }  size={10}/>
+                                <ThumbsDown style={{cursor: 'pointer'}} onClick={handleDisLike}  className={dislike ? `text-red-500` : `text-gray-500`}  size={10}/>
                             </div>
                         </div>
                     </div>
@@ -255,8 +268,8 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
         </div>
 
         <div className='flex gap-2 items-center absolute bottom-5 right-[55px]'>
-            <ThumbsUp className='text-gray-500' size={15}/>
-            <ThumbsDown className='text-gray-500' size={15}/>
+            <ThumbsUp style={{cursor: 'pointer'}}  onClick={handleLike} className={like ? `text-green-500` : `text-gray-500`}  size={15}/>
+            <ThumbsDown style={{cursor: 'pointer'}}  onClick={handleDisLike} className={dislike ? `text-red-500` : `text-gray-500`} size={15}/>
         </div>
       </div>
     </>
