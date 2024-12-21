@@ -37,9 +37,12 @@ const Carousel: React.FC = () => {
 
   return (<>
    {modal && (
-    <div className='absolute top-0 bottom-0 z-50 grid place-items-center right-0 left-0 m-auto'>
+    <div className='bg-[#00000009] absolute top-0 z-50 m-auto bottom-0 left-0 right-0 '>
+    <div className='absolute rounded-2xl overflow-hidden top-0 bottom-0  grid place-items-center right-0 left-0 m-auto'>
       <LeadInfo closeModal={closeModal} leadIndex={currentLead}/>
-      </div>)}
+      </div>
+      </div>
+      )}
     <div className="relative w-full max-w-4xl">
       <div className="overflow-hidden rounded-lg">
         <div

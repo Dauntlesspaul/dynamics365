@@ -22,7 +22,7 @@ export default function RootLayout({
       >
         <div className="flex h-screen flex-col md:flex-row md:overflow-hidden">
           <SideNav/>
-        <div className="no-scrollbar relative flex-grow  md:overflow-y-auto ">{children}</div>
+        <div className="no-scrollbar flex-grow  md:overflow-y-auto ">{children}</div>
       </div>
       </body>
     </html>
