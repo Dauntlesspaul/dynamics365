@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { ChevronLeftOutlined, ChevronRightOutlined } from '@mui/icons-material';
 import Image from 'next/image';
 import { leadsCarousel } from '@/lib/placeholder';
-import CircleIcon from '@mui/icons-material/Circle';
 import CloseOutlinedIcon from '@mui/icons-material/CloseOutlined';
 import ModeOutlinedIcon from '@mui/icons-material/ModeOutlined';
 import SendOutlinedIcon from '@mui/icons-material/SendOutlined';
