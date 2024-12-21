@@ -18,7 +18,7 @@ import {
   } from "@/components/ui/tooltip";
 export default function ToolBar(){
     return(
-    <div className=" bg-green-500 top-0 sticky z-50  w-full">
+    <div className=" bg-green-500 top-0 sticky z-30  w-full">
         <div className="shadow-lg pt-2  h-fit flex items-center py-[4px] overflow-x-auto -  bg-white px-2 justify-between">
             <div className="flex gap-1 items-center cursor-pointer">
                 <p className="text-sm whitespace-nowrap">My open leads</p> <ChevronDown size={18}/>
