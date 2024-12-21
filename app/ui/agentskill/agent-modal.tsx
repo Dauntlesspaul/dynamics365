@@ -52,10 +52,10 @@ function AgentModal({handleClose}: {handleClose: ()=>void}) {
               <p className='my-3'>Allow the agent to process email inboxes to read mail from unknown vendors</p> 
               <CheckboxesTags/>
               <div className='flex right-10 items-center gap-3 mt-20 absolute bottom-10'>
-                <button onClick={handleModalClose} className='rounded-sm w-24 p-2 px-3 shadow-sm bg-[#d7d6d6] border text-[#949494]'>
+                <button className='rounded-sm w-24 p-2 px-3 shadow-sm bg-[#d7d6d6] border text-[#949494]'>
                     Activate
                 </button>
-                <button  className='rounded-sm text-black font-semibold shadow-sm w-20 p-2 border bg-[#e9e9e9]'>
+                <button  onClick={handleModalClose}  className='rounded-sm text-black font-semibold shadow-sm w-20 p-2 border bg-[#e9e9e9]'>
                     Close
                 </button>
               </div>
