@@ -270,7 +270,7 @@ const leadsCarousel = [
     name: 'Samantha Green',
     image: samanthaProfile,
     profileDes: 'Sales Manager, Starbucks Global',
-    interest: 'Samantha may be interested in scaling Starbucks’ regional logistics for high-demand products.',
+    interest: 'Samantha may be interested in scaling Starbucks &apos; regional logistics for high-demand products.',
     description: () => (
       <>
         Sales Manager <CircleIcon sx={{ marginTop: '-8px', fontSize: '5px', color: '#888888' }} /> Starbucks Global
