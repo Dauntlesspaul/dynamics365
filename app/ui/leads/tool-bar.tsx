@@ -40,7 +40,7 @@ export default function ToolBar(){
                     <RefreshOutlinedIcon sx={{ fontSize: '20px', transform: 'rotate(-100deg)'}}/> 
                     <p className="text-sm whitespace-nowrap">Refresh</p>
                 </div>
-                <div className="flex items-center p-1 w-28 cursor-pointer hover:bg-[#f6f6f6]">
+                <div className="flex items-center p-1 w-[119px] cursor-pointer hover:bg-[#f6f6f6]">
                     <Image
                         height={20}
                         width={20}
