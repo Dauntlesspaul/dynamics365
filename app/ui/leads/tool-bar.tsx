@@ -40,16 +40,17 @@ export default function ToolBar(){
                     <RefreshOutlinedIcon sx={{ fontSize: '20px', transform: 'rotate(-100deg)'}}/> 
                     <p className="text-sm whitespace-nowrap">Refresh</p>
                 </div>
-                <div className="flex items-center gap-1 p-[3px] cursor-pointer hover:bg-[#f6f6f6]">
+                <div className="flex items-center p-1 w-28 cursor-pointer hover:bg-[#f6f6f6]">
                     <Image
-                    height={20}
-                    width={20}
-                    src={microSoftLogo}
-                    alt="collaboration logo"
+                        height={20}
+                        width={20}
+                        src={microSoftLogo}
+                        alt="collaboration logo"
+                        className="mr-2"
                     />
                     <p className="text-sm whitespace-nowrap">Collaborate</p>
                 </div>
-                <div className="flex items-center ml-10 group gap-1 p-[3px]  cursor-pointer hover:bg-[#f6f6f6]">
+                <div className="flex items-center ml-10 group  gap-1 p-[3px]  cursor-pointer hover:bg-[#f6f6f6]">
                     <Trash2Icon className="group-hover:text-red-500 -mt-1" size={17}/> 
                     <p className="text-sm">Delete</p>
                 </div>
