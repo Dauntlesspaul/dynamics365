@@ -12,7 +12,7 @@ function KeyActivities() {
   return (
     <div>
         <p className='text-sm  mt-1 font-medium text-[#686868]'>Other key activities</p>
-        <div className='mt-4 rounded-lg shadow-md pt-2 px-6 py-2'>
+        <div className='mt-4 rounded-lg cursor-pointer shadow-md pt-2 px-6 py-2'>
         <div className='flex items-center gap-2'>
             <div className='rounded-full size-8 bg-[gray] overflow-hidden'>
                 <Image
@@ -39,7 +39,7 @@ function KeyActivities() {
          </div>
         </div>
 
-        <div className='mt-4 rounded-lg shadow-md pt-2 px-6 py-2'>
+        <div className='mt-4 cursor-pointer rounded-lg shadow-md pt-2 px-6 py-2'>
         <div className='flex items-center gap-2'>
             <div className='rounded-full size-8 bg-[gray] overflow-hidden'>
                 <Image
