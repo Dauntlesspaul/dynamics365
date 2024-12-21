@@ -37,7 +37,7 @@ function AgentModal({handleClose}: {handleClose: ()=>void}) {
                 <ChevronDown className='text-gray-600' size={22}/>
             </button>
               <p>Check if on-hand inventory  will allow all sale orders to ship without delay</p>
-              <p className='leading-9'>When <span className='text-sm text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><PersonOutlineOutlinedIcon sx={{fontSize: '20px', color: '#7094ba', mx:'3px'}}/>any vendor</span>  sends a mail with changes to <span className='text-sm text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><DescriptionOutlinedIcon sx={{fontSize: '20px', color: '#7094ba', mx:'3px'}}/> confirmed purchase orders</span>, check if the resulting  <span className='text-sm text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><NotesOutlinedIcon sx={{fontSize: '20px', color: '#7094ba', mx:'3px'}}/>on-hand inventory</span> will allow <span className='text-sm text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><FileCopyOutlinedIcon sx={{fontSize: '19px', color: '#7094ba', mx:'3px'}}/>all sales orders</span> to <span className='text-sm text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><DirectionsOutlinedIcon sx={{fontSize: '19px', color: '#7094ba', mx:'3px'}}/>ship without delay</span> . If so, <span className='text-sm text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><DirectionsOutlinedIcon sx={{fontSize: '19px', color: '#7094ba', mx:'3px'}}/>update the purchase order</span> to reflect the change.</p>
+              <p className='leading-9'>When <span className='text-sm cursor-pointer text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><PersonOutlineOutlinedIcon sx={{fontSize: '20px', color: '#7094ba', mx:'3px'}}/>any vendor</span>  sends a mail with changes to <span className='text-sm cursor-pointer text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><DescriptionOutlinedIcon sx={{fontSize: '20px', color: '#7094ba', mx:'3px'}}/> confirmed purchase orders</span>, check if the resulting  <span className='text-sm cursor-pointer text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><NotesOutlinedIcon sx={{fontSize: '20px', color: '#7094ba', mx:'3px'}}/>on-hand inventory</span> will allow <span className='text-sm cursor-pointer text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><FileCopyOutlinedIcon sx={{fontSize: '19px', color: '#7094ba', mx:'3px'}}/>all sales orders</span> to <span className='text-sm cursor-pointer text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><DirectionsOutlinedIcon sx={{fontSize: '19px', color: '#7094ba', mx:'3px'}}/>ship without delay</span> . If so, <span className='text-sm cursor-pointer text-[#7094ba] bg-[#e9f6fe] p-[5px] px-[7px] rounded-lg whitespace-nowrap'><DirectionsOutlinedIcon sx={{fontSize: '19px', color: '#7094ba', mx:'3px'}}/>update the purchase order</span> to reflect the change.</p>
           </div>
           <div className='mt-14'>
             <div className='flex items-center gap-3'>
@@ -52,10 +52,10 @@ function AgentModal({handleClose}: {handleClose: ()=>void}) {
               <p className='my-3'>Allow the agent to process email inboxes to read mail from unknown vendors</p> 
               <CheckboxesTags/>
               <div className='flex right-10 items-center gap-3 mt-20 absolute bottom-10'>
-                <button className='rounded-sm w-24 p-2 px-3 shadow-sm bg-[#d7d6d6] border text-[#949494]'>
+                <button onClick={handleModalClose} className='rounded-sm w-24 p-2 px-3 shadow-sm bg-[#d7d6d6] border text-[#949494]'>
                     Activate
                 </button>
-                <button className='rounded-sm text-black shadow-sm w-20 p-2 border bg-[#e9e9e9]'>
+                <button  className='rounded-sm text-black font-semibold shadow-sm w-20 p-2 border bg-[#e9e9e9]'>
                     Close
                 </button>
               </div>
