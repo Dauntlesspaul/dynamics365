@@ -39,8 +39,8 @@ const CustomizedProgressBars: React.FC = () => {
     <div className="flex justify-between items-center">
         <p className='text-xs pl-5'> <WatchLaterOutlinedIcon sx={{fontSize: '12px', marginTop: '-2px'}}/> one month until Q4 ends</p>
         <div className='w-[42%] flex justify-between'>
-            <p className='text-sm relative'> <span className='text-black absolute bg-black w-[1px] h-[26px] -left-1 top-1 '></span>Target<span className='ml-4 font-semibold'>$45 million</span></p>
-            <p className='text-sm'>68% of target achieved</p>
+            <p className='text-sm relative'> <span className='text-black absolute bg-black w-[1px] h-[26px] -left-1 top-1  whitespace-nowrap'></span>Target<span className='ml-4 font-semibold whitespace-nowrap'>$45 million</span></p>
+            <p className='text-sm whitespace-nowrap'>68% of target achieved</p>
         </div>
     </div>       
     <Stack spacing={2} sx={{ flexGrow: 1 , margin: '2px 0', padding:0}}>

@@ -18,13 +18,13 @@ function CopilotMenu() {
   return (
     <div
       className={clsx(
-        'mt-3 p-[2px] rounded-xl overflow-hidden bg-gradient-to-r from-blue-700 via-[#b8dbf0] to-[#ba98d7] shadow-xl shadow-[#a7a7a7ce] transition-all duration-500 ease-linear'
+        'mt-3 p-[2px] rounded-xl overflow-hidden bg-gradient-to-r  from-blue-700 via-[#b8dbf0] to-[#ba98d7] shadow-xl shadow-[#a7a7a7ce] transition-all duration-500 ease-linear'
       )}
       style={{
         maxHeight: isExpanded ? 'fit-content' : '90px', 
       }}
     >
-      <div className="w-full overflow-hidden rounded-xl bg-white p-5">
+      <div className="w-full  overflow-auto rounded-xl bg-white p-5">
         <div className="flex items-center">
           <Image
             src={CopillotLogo}

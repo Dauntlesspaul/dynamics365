@@ -10,7 +10,12 @@ import EditRoadOutlinedIcon from '@mui/icons-material/EditRoadOutlined';
 import PieChartOutlineOutlinedIcon from '@mui/icons-material/PieChartOutlineOutlined';
 import ShareIcon from '@/public/images/share-1-svgrepo-com.svg';
 import MoreVertOutlinedIcon from '@mui/icons-material/MoreVertOutlined';
-
+import {
+    Tooltip,
+    TooltipContent,
+    TooltipProvider,
+    TooltipTrigger,
+  } from "@/components/ui/tooltip";
 export default function ToolBar(){
     return(
     <div className=" bg-green-500 top-0 sticky z-50  w-full">
@@ -53,8 +58,14 @@ export default function ToolBar(){
                     <ChevronDown className='text-gray-500 cursor-pointer' size={15}/>
                 </div>
                 <div className="flex items-center group gap-1 cursor-pointer relative">
-                    <MoreVertOutlinedIcon/>
-                    <span className=" hidden absolute  bg-white shadow-sm rounded-sm p-[1px] px-[4px] top-10 text-black text-[14px]  group-hover:block">more</span>
+                    <TooltipProvider>
+                    <Tooltip>
+                        <TooltipTrigger><MoreVertOutlinedIcon/></TooltipTrigger>
+                        <TooltipContent>
+                        <p className="text-sm">more</p>
+                        </TooltipContent>
+                    </Tooltip>
+                    </TooltipProvider>
                 </div>
                 <div className="flex items-center hover:bg-[#f6f6f6] cursor-pointer rounded-sm p-[5px] border-[1px] gap-1">
                     <PieChartOutlineOutlinedIcon sx={{fontSize: '20px'}}/> 
