@@ -14,6 +14,7 @@ import { ThumbsDown, ThumbsUp } from 'lucide-react';
 import messageIcon from '@/public/images/mail.png';
 import autoIcon from '@/public/images/stars-svg.svg';
 import rateIcon from '@/public/images/rate.jpg';
+import linkedinIcon from '@/public/images/linkedin.png';
 
 
 
@@ -83,7 +84,14 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
                 </div>
                 <div>
                     <p className='font-semibold text-sm'>{lead.name}</p>
-                    <p className='relative text-xs text-[#888888]'>COO <CircleIcon sx={{marginTop: '-8px', fontSize: '5px', color: '#888888]'}}/> Engage Northwind Traders</p>
+                    <p className='relative text-xs text-[#888888] flex items-center'>
+                      <Image
+                      alt='linkedin'
+                      src={linkedinIcon}
+                      width={16}
+                      height={16}
+                      />
+                        &nbsp; | {lead.profileDes}</p>
                 </div>
             </div>
             <div className='p-4 mt-4 rounded bg-gradient-to-b from-white via-white to-[#dbdee3]'>
@@ -96,7 +104,7 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
                         width={17}
                         height={17}
                         />
-                        <p className='text-xs font-bold bg-gradient-to-r from-blue-700 to-[#aa9acf] text-transparent bg-clip-text'>{(lead.name.split(' ')[0])} may be interested in upgrading esspreso machines for her in-store coffee shop.</p>
+                        <p className='text-xs font-bold bg-gradient-to-r from-blue-700 to-[#aa9acf] text-transparent bg-clip-text'>{lead.interest}</p>
                     </div>
                     <div className='flex gap-2'>
                         <div className='px-2 py-[3px] cursor-pointer shadow-md rounded-sm bg-white flex items-center gap-[2px]'>
@@ -242,7 +250,15 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
             ></button>
           ))}
         </div>
-        <p className='text-xs text-gray-500 absolute bottom-5 left-[55px]'>Showing {currentIndex + 1} of {leadsCarousel.length} </p>
+        <div className='flex gap-10 items-center absolute bottom-5 left-[55px]'>
+            <p className='text-xs text-gray-500 '>Showing {currentIndex + 1} of {leadsCarousel.length} </p>
+            <p className='text-blue-700 text-xs cursor-pointer'>Show All</p>
+        </div>
+
+        <div className='flex gap-2 items-center absolute bottom-5 right-[55px]'>
+            <ThumbsUp className='text-gray-500' size={15}/>
+            <ThumbsDown className='text-gray-500' size={15}/>
+        </div>
       </div>
     </>
   );

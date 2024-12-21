@@ -125,6 +125,8 @@ const leadsCarousel = [
   {
     name: 'Jane Reyes',
     image: janeProfile,
+    profileDes: 'COO, Northwind Traders',
+    interest: 'Jane may be interested in upgrading esspreso machines for her in-store coffee shop.',
     description: () => (
       <>
         COO <CircleIcon sx={{ marginTop: '-8px', fontSize: '5px', color: '#888888' }} /> Engage Northwind Traders
@@ -196,6 +198,8 @@ const leadsCarousel = [
   {
     name: 'Allan Munger',
     image: allanProfile,
+    profileDes: 'Head of Real Estate Development, Contosso Coffee',
+    interest: 'Allan may be interested in streamlining service contracts for their expanding coffee chain.',
     description: () => (
       <>
         Head of Real Estate Development <CircleIcon sx={{ marginTop: '-8px', fontSize: '5px', color: '#888888' }} /> Contosso Coffee
@@ -265,6 +269,8 @@ const leadsCarousel = [
   {
     name: 'Samantha Green',
     image: samanthaProfile,
+    profileDes: 'Sales Manager, Starbucks Global',
+    interest: 'Samantha may be interested in scaling Starbucks’ regional logistics for high-demand products.',
     description: () => (
       <>
         Sales Manager <CircleIcon sx={{ marginTop: '-8px', fontSize: '5px', color: '#888888' }} /> Starbucks Global
@@ -328,6 +334,8 @@ const leadsCarousel = [
   {
     name: 'Michael Carter',
     image: michaelProfile,
+    profileDes: 'COO, Blue Bean Roasters',
+    interest: 'Michael may be interested in upgrading roasting equipment for better cost efficiency.',
     description: () => (
       <>
         Chief Operations Officer <CircleIcon sx={{ marginTop: '-8px', fontSize: '5px', color: '#888888' }} /> Blue Bean Roasters
