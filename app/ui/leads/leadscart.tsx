@@ -9,10 +9,20 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
+  BarChart,
+  Bar,
 } from 'recharts';
 import { PieChart } from '@mui/x-charts'; // Import MUI PieChart
-import { BarChart, Bar } from 'recharts';
 import { leads } from '@/lib/placeholder';
+
+// Define the type for tooltip payload
+type TooltipPayload = {
+  payload: {
+    topics?: string[];
+    names?: string;
+  };
+  value: number;
+};
 
 // Format the line chart data with topics
 const formattedLineData = leads.reduce((acc, lead) => {
@@ -58,35 +68,35 @@ const barChartData = Object.entries(leadNamesCount).map(([status, names]) => ({
   names: names.join(', '), // Join names as a comma-separated string
 }));
 
-// Tooltip customizations for LineChart (Topics for Trend Over Time)
-const CustomLineTooltip = ({ payload, label }: any) => {
+// Tooltip for LineChart
+const CustomLineTooltip: React.FC<{ payload?: TooltipPayload[]; label?: string }> = ({ payload, label }) => {
   if (!payload || payload.length === 0) {
     return null;
   }
   const count = payload[0].value;
   const date = label;
-  const topics = payload[0].payload.topics.join(', '); // Get topics for the date
+  const topics = payload[0].payload.topics?.join(', ') || 'No topics recorded'; // Safely access topics
 
   return (
     <div className="custom-tooltip" style={{ backgroundColor: 'white', padding: '5px', border: '1px solid #ccc' }}>
       <p>{`Date: ${date}`}</p>
       <p>{count === 0 ? 'No leads recorded for this date.' : `Leads: ${count}`}</p>
-      <p>{`Topics: ${topics}`}</p> {/* Display topics */}
+      <p>{`Topics: ${topics}`}</p>
     </div>
   );
 };
 
-// Tooltip customizations for BarChart (Names for Total Leads by Status)
-const CustomBarTooltip = ({ payload, label }: any) => {
+// Tooltip for BarChart
+const CustomBarTooltip: React.FC<{ payload?: TooltipPayload[]; label?: string }> = ({ payload, label }) => {
   if (!payload || payload.length === 0) {
     return null;
   }
-  const { names } = payload[0].payload; // Get names for the status
+  const names = payload[0].payload.names || 'No leads recorded'; // Safely access names
 
   return (
     <div className="custom-tooltip" style={{ backgroundColor: 'white', padding: '5px', border: '1px solid #ccc' }}>
       <p>{`Status: ${label}`}</p>
-      <p>{`Leads: ${names}`}</p> {/* Display lead names */}
+      <p>{`Leads: ${names}`}</p>
     </div>
   );
 };
