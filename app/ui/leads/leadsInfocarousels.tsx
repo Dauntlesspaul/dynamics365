@@ -14,6 +14,7 @@ import messageIcon from '@/public/images/mail.png';
 import autoIcon from '@/public/images/stars-svg.svg';
 import rateIcon from '@/public/images/rate.jpg';
 import linkedinIcon from '@/public/images/linkedin.png';
+import ColorTabs from './tab';
 
 
 
@@ -130,16 +131,7 @@ function LeadInfo({closeModal, leadIndex}: {closeModal: ()=> void, leadIndex: nu
                     </div>
                     </div>
                 </div>
-                <div className='mt-4 rounded-md  shadow-md'>
-                    <button className='relative group text-sm p-3'>
-                        Engage
-                        <span className='absolute group-hover:bg-[#3d56ce] left-0 right-0 mx-auto w-[60%] bottom-0 h-1'></span>
-                    </button>
-                    <button className='relative group text-sm p-3'>
-                        Research
-                        <span className='absolute group-hover:bg-[#3d56ce] left-0 w-[60%] mx-auto right-0 bottom-0 h-1'></span>
-                    </button>
-                </div>
+                <ColorTabs/>
 
                 <div className='mt-4 bg-gradient-to-b from-white to-[#f6f7f8] rounded-xl p-4 shadow-md'>
                     <div className='p-4 relative bg-gradient-to-r from-[#eef4fe] rounded-tr-[30px]  to-[#f0f0f8] rounded-lg'>

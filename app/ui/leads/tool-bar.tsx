@@ -1,3 +1,4 @@
+'use client'
 import { ChevronDown, Trash2Icon } from "lucide-react";
 import BrokenImageOutlinedIcon from '@mui/icons-material/BrokenImageOutlined';
 import FormatListBulletedOutlinedIcon from '@mui/icons-material/FormatListBulletedOutlined';
@@ -16,7 +17,16 @@ import {
     TooltipProvider,
     TooltipTrigger,
   } from "@/components/ui/tooltip";
-export default function ToolBar(){
+
+  interface ToolBarProps {
+    handleTabChange: (tab: string) => void; 
+  }
+  
+export default function ToolBar({handleTabChange}: ToolBarProps){
+
+    const handleTab = (tab: string)=>{
+            handleTabChange(tab)
+    }
     return(
     <div className=" bg-green-500 top-0 sticky z-30  w-full">
         <div className="shadow-lg pt-2  h-fit flex items-center py-[4px] overflow-x-auto -  bg-white px-2 justify-between">
@@ -24,11 +34,11 @@ export default function ToolBar(){
                 <p className="text-sm whitespace-nowrap">My open leads</p> <ChevronDown size={18}/>
             </div>
             <div className="flex space-x-2 items-center w-fit justify-between">
-                <div className="flex items-center gap-1 rounded-sm p-[3px] cursor-pointer hover:bg-[#f6f6f6]">
+                <div onClick={() => handleTab('chart')} className="flex items-center gap-1 rounded-sm p-[3px] cursor-pointer hover:bg-[#f6f6f6]">
                     <BrokenImageOutlinedIcon sx={{color: 'blue', fontSize: '20px'}}/> 
                     <p className="text-sm whitespace-nowrap">Show Chart</p>
                 </div>
-                <div className="flex items-center gap-1 rounded-sm p-[3px] cursor-pointer hover:bg-[#f6f6f6]">
+                <div onClick={() => handleTab('focused view')} className="flex items-center gap-1 rounded-sm p-[3px] cursor-pointer hover:bg-[#f6f6f6]">
                     <FormatListBulletedOutlinedIcon sx={{ fontSize: '20px', color: '#3e6dc4'}}/> 
                     <p className="text-sm whitespace-nowrap">Focused view</p>
                 </div>
