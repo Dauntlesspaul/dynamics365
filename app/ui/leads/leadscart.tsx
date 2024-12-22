@@ -6,24 +6,25 @@ import {
   XAxis,
   YAxis,
   CartesianGrid,
-  Tooltip as LineTooltip,
+  Tooltip,
   Legend,
   ResponsiveContainer,
 } from 'recharts';
 import { PieChart } from '@mui/x-charts'; // Import MUI PieChart
-import { BarChart, Bar, Tooltip as BarTooltip } from 'recharts';
+import { BarChart, Bar } from 'recharts';
 import { leads } from '@/lib/placeholder';
 
-// Format the line chart data
+// Format the line chart data with topics
 const formattedLineData = leads.reduce((acc, lead) => {
   const date = lead.date.split(' ')[0]; // Extract date part (e.g., '04/02/2024')
   if (acc[date]) {
     acc[date].count += 1;
+    acc[date].topics.push(lead.topic); // Add topic to topics array
   } else {
-    acc[date] = { date, count: 1 };
+    acc[date] = { date, count: 1, topics: [lead.topic] }; // Initialize topics with the first lead's topic
   }
   return acc;
-}, {} as { [key: string]: { date: string; count: number } });
+}, {} as { [key: string]: { date: string; count: number; topics: string[] } });
 const lineChartData = Object.values(formattedLineData);
 
 // Format the pie chart data (status counts)
@@ -53,29 +54,46 @@ const leadNamesCount = leads.reduce((acc, lead) => {
 
 const barChartData = Object.entries(leadNamesCount).map(([status, names]) => ({
   status,
-  totalLeads: names.length,
-  leads: names.join(', '), // Join names as a comma-separated string
+  totalLeads: names.length, // Correctly calculating total leads
+  names: names.join(', '), // Join names as a comma-separated string
 }));
 
-// Custom Tooltip for LineChart
+// Tooltip customizations for LineChart (Topics for Trend Over Time)
 const CustomLineTooltip = ({ payload, label }: any) => {
   if (!payload || payload.length === 0) {
     return null;
   }
   const count = payload[0].value;
   const date = label;
+  const topics = payload[0].payload.topics.join(', '); // Get topics for the date
 
   return (
     <div className="custom-tooltip" style={{ backgroundColor: 'white', padding: '5px', border: '1px solid #ccc' }}>
       <p>{`Date: ${date}`}</p>
       <p>{count === 0 ? 'No leads recorded for this date.' : `Leads: ${count}`}</p>
+      <p>{`Topics: ${topics}`}</p> {/* Display topics */}
+    </div>
+  );
+};
+
+// Tooltip customizations for BarChart (Names for Total Leads by Status)
+const CustomBarTooltip = ({ payload, label }: any) => {
+  if (!payload || payload.length === 0) {
+    return null;
+  }
+  const { names } = payload[0].payload; // Get names for the status
+
+  return (
+    <div className="custom-tooltip" style={{ backgroundColor: 'white', padding: '5px', border: '1px solid #ccc' }}>
+      <p>{`Status: ${label}`}</p>
+      <p>{`Leads: ${names}`}</p> {/* Display lead names */}
     </div>
   );
 };
 
 const CustomChartWithLineAndPie = () => (
   <div className="mt-5 bg-gradient-to-b from-white to-gray-200 p-8">
-    {/* LineChart Section */}
+    {/* LineChart Section (Trend Over Time with Topics) */}
     <div style={{ marginBottom: '30px' }}>
       <h3>Leads Trend Over Time</h3>
       <ResponsiveContainer width="100%" height={300}>
@@ -83,7 +101,7 @@ const CustomChartWithLineAndPie = () => (
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="date" />
           <YAxis />
-          <LineTooltip content={<CustomLineTooltip />} />
+          <Tooltip content={<CustomLineTooltip />} /> {/* Show topics in the tooltip */}
           <Legend />
           <Line type="monotone" dataKey="count" stroke="#82ca9d" />
         </LineChart>
@@ -117,17 +135,7 @@ const CustomChartWithLineAndPie = () => (
             <XAxis dataKey="status" />
             <YAxis />
             <Bar dataKey="totalLeads" fill="#d0dcee" />
-            <BarTooltip
-              content={({ payload }: any) => {
-                if (!payload || payload.length === 0) return null;
-                const { leads } = payload[0].payload;
-                return (
-                  <div className="custom-tooltip" style={{ backgroundColor: 'white', padding: '5px', border: '1px solid #ccc' }}>
-                    <p>{`Leads in this status: ${leads}`}</p>
-                  </div>
-                );
-              }}
-            />
+            <Tooltip content={<CustomBarTooltip />} /> {/* Show names in the tooltip */}
           </BarChart>
         </ResponsiveContainer>
       </div>
