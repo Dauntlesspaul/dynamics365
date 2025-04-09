@@ -1,4 +1,4 @@
-# 📊 Single page Responsive Dashboard – Coding Task Submission
+# 📊 Single page Responsive Dashboard (Desktop View) – Coding Task Submission
 
 This project is a **responsive desktop dashboard UI** built from static image files as part of a coding task for a frontend/developer job application. The goal was to replicate the layout and design provided in the image with a focus on pixel-perfect implementation, responsiveness, and clean, maintainable code.
 
@@ -12,7 +12,7 @@ To recreate a visually accurate and responsive dashboard user interface based on
 
 ## 💻 Live Demo
 
-🌐 [Live Demo]([https://your-dashboard-demo-link.com](https://dynamics365-rho.vercel.app/leads) 
+🌐 [Live Demo](https://dynamics365-rho.vercel.app/leads) 
 
 ---
 
