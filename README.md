@@ -1,36 +1,36 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📊 Single page Responsive Dashboard – Coding Task Submission
 
-## Getting Started
+This project is a **responsive desktop dashboard UI** built from static image files as part of a coding task for a frontend/developer job application. The goal was to replicate the layout and design provided in the image with a focus on pixel-perfect implementation, responsiveness, and clean, maintainable code.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🎯 Objective
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To recreate a visually accurate and responsive dashboard user interface based on the given static image assets (e.g., JPEG, PNG, or Figma design).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 💻 Live Demo
 
-## Learn More
+🌐 [Live Demo]([https://your-dashboard-demo-link.com](https://dynamics365-rho.vercel.app/leads) 
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🖼️ Preview
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Image](https://github.com/user-attachments/assets/45d59c6a-5201-4633-92e8-7b3114c21310)
+![Image](https://github.com/user-attachments/assets/84d5c21e-bed6-4bb4-a7f6-b33b38e89e4f)
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🛠️ Tech Stack
+
+- **React.js** – Component-based UI library
+- **Tailwind CSS** – Utility-first CSS framework for styling
+- **HTML5 & CSS3** – Semantic structure and layout
+- **Responsive Design** – Flexbox/Grid, media queries for desktop responsiveness
+
+
+![Image](https://github.com/user-attachments/assets/f95b9202-868f-4270-8ca6-496dd978a968)
+![Image](https://github.com/user-attachments/assets/a343ecdf-4cc9-489f-b817-b0e69320cd6a)
